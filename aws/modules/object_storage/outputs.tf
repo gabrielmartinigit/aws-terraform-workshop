@@ -1,3 +1,3 @@
-output "bucket_object_storage_id" {
-  value = resource.aws_s3_bucket.object_storage_bucket.id
+output "cloudfront_distribution_endpoint_storage" {
+  value = resource.aws_cloudfront_distribution.storage_distribution.domain_name
 }
