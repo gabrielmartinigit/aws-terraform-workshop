@@ -28,7 +28,7 @@ Common repository has the objective to centralize common modules that SRE/DevOps
 │ │ │ ├── data.tf //Data sources allow Terraform to use information defined outside of Terraform
 │ │ │ ├── main.tf //Call modules, locals, and data sources to create all resources
 │ │ │ ├── outputs.tf //Contains outputs from the resources created in main.tf
-│ │ │ └── variables.tf //C8790ontains declarations of variables used in main.tf
+│ │ │ └── variables.tf //Contains declarations of variables used in main.tf
 │ │ └── module_z
 │ │   ├── data.tf
 │ │   ├── main.tf
@@ -41,11 +41,35 @@ Common repository has the objective to centralize common modules that SRE/DevOps
   └── module_z_architecture.jpg
 ```
 
-**TF Project ABCD**
+**TF Project ABCD Repository**
 
 Project repository that is going to provision infrastructure for project applications. It is going to reutilize common modules from TF Common Repository as starting point but It is going to have your own variables, environments and also can have your own specifications and modules if necessary.
 
 ```
+.
+├── README.md //Documentation about the project architecture
+├── .gitignore
+├── aws
+│   ├── Makefile
+│   ├── backend.tf //Provider configuration
+│   ├── main.tf //Call modules, locals, and data sources to create all resources for the project
+│   ├── outputs.tf //Contains outputs from the resources created in main.tf
+│   ├── variables.tf //Contains declarations of variables used in main.tf
+│   ├── data.tf //Data sources allow Terraform to use information defined outside of Terraform
+│   ├── project_modules //Specific project modules folder
+│   │   └── module_x
+│   │       ├── data.tf
+│   │       ├── main.tf
+│   │       ├── outputs.tf
+│   │       └── variables.tf
+│   ├── tf-backend
+│   ├── tf-vars
+│   │   ├── dev.tf
+│   │   ├── hmg.tf
+│   │   └── prd.tf
+└── architectures //Architectures files
+    ├── project_architecture.drawio
+    |-- project_archutecture.jpg
 
 ```
 
