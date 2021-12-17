@@ -68,7 +68,7 @@ Repositório de projeto que fornecerá a infraestrutura para os aplicativos do p
 └── architectures //Arquivos de arquitetura
     ├── project_architecture.drawio
     |-- project_archutecture.jpg
-
+```
 
 ## Iniciando
 
@@ -125,4 +125,7 @@ terraform destroy //Destroy previously-created infrastructure
 - Estrutura de código do Terraform: https://www.terraform-best-practices.com/code-structure
 - Estrutura do módulo Terraform: https://www.terraform.io/language/modules/develop/structure
 - Backend remoto para AWS: https://www.terraform.io/language/settings/backends/s3
+
+```
+
 ```
