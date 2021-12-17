@@ -1,4 +1,4 @@
-# AWS Terrafrom Samples
+# AWS Terraform Samples
 
 Samples to create basic and common AWS architecture patterns with Terraform
 

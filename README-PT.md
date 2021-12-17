@@ -1,4 +1,4 @@
-# AWS Terrafrom Amostras
+# AWS Terraform Amostras
 
 Amostras para criar padrões de arquitetura AWS básicos e comuns com Terraform
 
