@@ -8,10 +8,10 @@ Amostras para criar padrões de arquitetura AWS básicos e comuns com Terraform
 
 ## Estrutura de Pastas
 
-## Módulos
+![project](images/projects.jpg)
 
 ## Iniciando
 
-### Manual
+### Implantação Manual
 
-### Pipeline/Release
+### Implantação via Pipeline/Release

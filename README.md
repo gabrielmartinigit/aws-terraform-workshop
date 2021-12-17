@@ -10,10 +10,10 @@ _Portuguese version: [README-PT](./README-PT.md)_
 
 ## Folder Structure
 
-## Modules
+![project](images/projects.jpg)
 
 ## Getting Started
 
-### Manual
+### Manual Deploy
 
-### Pipeline/Release
+### Pipeline/Release Deploy
