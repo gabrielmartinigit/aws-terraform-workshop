@@ -22,6 +22,7 @@ Amostras para criar padrões de arquitetura AWS básicos e comuns com Terraform
 
 ## Referências
 
+- Comandos Terraform: https://www.terraform.io/cli/commands
 - Terraform AWS Provider Registry: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 - Estrutura de código do Terraform: https://www.terraform-best-practices.com/code-structure
 - Estrutura do módulo Terraform: https://www.terraform.io/language/modules/develop/structure
