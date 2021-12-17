@@ -1,3 +1,3 @@
-output "bucket_static_website_endpoint" {
-  value = resource.aws_s3_bucket.static_website_bucket.website_endpoint
+output "cloudfront_distribution_endpoint" {
+  value = resource.aws_cloudfront_distribution.static_website_distribution.domain_name
 }
