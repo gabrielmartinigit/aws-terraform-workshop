@@ -1,0 +1,52 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: TerraformInstaller@0
+  inputs:
+    terraformVersion: 'latest'
+
+- task: TerraformTaskV2@2
+  inputs:
+    provider: 'aws'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/dia2/lab2'
+    backendServiceAWS: 'AWS Terraform'
+    backendAWSBucketName: 'martinig-terraform-estado'
+    backendAWSKey: 'dia2/lab2/workshop.tfstate'
+  displayName: 'Terraform init'
+
+- task: TerraformTaskV2@2
+  inputs:
+    provider: 'aws'
+    command: 'validate'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/dia2/lab2'
+  displayName: 'Terraform validate'
+
+- task: TerraformTaskV2@2
+  inputs:
+    provider: 'aws'
+    command: 'plan'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/dia2/lab2'
+    commandOptions: '-input=false -out=tfplan'
+    environmentServiceNameAWS: 'AWS Terraform'
+  displayName: 'Terraform plan'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/dia2/lab2'
+    includeRootFolder: true
+    archiveType: 'tar'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-tfplan.tgz'
+    replaceExistingArchive: true
+  displayName: 'Store artifact'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-tfplan.tgz'
+    artifact: '$(Build.BuildId)-tfplan'
+    publishLocation: 'pipeline'
+  displayName: 'Publish artifact'
