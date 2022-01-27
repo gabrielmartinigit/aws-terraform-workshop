@@ -46,6 +46,12 @@ aws iam create-role --role-name terraform-prod-role --assume-role-policy-documen
 
 // Comando para criar uma chave
 aws iam create-access-key --user-name terraform
+
+// Comando para criar profile
+aws configure --profile terraform
+
+// Comando para assumir role
+aws sts assume-role --role-arn arn:aws:iam::SUA_CONTA:role/terraform-prod-role --role-session-name test
 ```
 
 _Ferramentas utilizadas:_
