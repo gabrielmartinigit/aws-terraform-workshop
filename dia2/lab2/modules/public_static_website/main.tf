@@ -16,7 +16,15 @@ resource "aws_s3_bucket" "static_website_bucket" {
   }
 
   tags = {
-    Resource = "Test Bucket"
+    Resource             = "Test Bucket"
+    git_commit           = "ca09a2262cb29bcd16e5071ca4abcabdceb30a2e"
+    git_file             = "dia2/lab2/modules/public_static_website/main.tf"
+    git_last_modified_at = "2022-01-27 06:21:57"
+    git_last_modified_by = "gabrielb.martini@gmail.com"
+    git_modifiers        = "gabrielb.martini"
+    git_org              = "gabrielmartinigit"
+    git_repo             = "aws-terraform-workshop"
+    yor_trace            = "4769a8d3-b9ab-491b-9800-d55deb293dd0"
   }
 }
 
