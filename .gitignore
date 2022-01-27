@@ -33,3 +33,6 @@ override.tf.json
 
 # OSX
 .DS_Store
+
+# Plugins
+.infracost

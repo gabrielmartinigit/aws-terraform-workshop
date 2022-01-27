@@ -31,7 +31,6 @@ aws s3 cp ../utils/index.html s3://NOME_DO_SEU_BUCKET/index.html
   - CI/CD para IaC
   - Lab 1, Lab 2, Lab 3
   - Desafio
-  - Estudos e próximos passos (flexibilidade, custos, testes, segurança, livros, etc.)
 
 _Ferramentas utilizadas:_
 
