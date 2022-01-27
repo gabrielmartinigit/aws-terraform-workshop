@@ -32,6 +32,22 @@ aws s3 cp ../utils/index.html s3://NOME_DO_SEU_BUCKET/index.html
   - Lab 1, Lab 2, Lab 3
   - Desafio
 
+_Comandos que podem auxiliar:_
+
+```
+// Comando para criar um bucket do S3
+aws s3 mb s3://seunome-terraform-estado
+
+// Comando para criar um user IAM
+aws iam create-user --user-name terraform --permissions-boundary arn:aws:iam::aws:policy/AdministratorAccess
+
+// Comando para criar uma role IAM
+aws iam create-role --role-name terraform-prod-role --assume-role-policy-document file://role-trust-policy.json --permissions-boundary arn:aws:iam::aws:policy/AdministratorAccess
+
+// Comando para criar uma chave
+aws iam create-access-key --user-name terraform
+```
+
 _Ferramentas utilizadas:_
 
 - Yor: https://github.com/bridgecrewio/yor
@@ -44,6 +60,7 @@ _Ferramentas utilizadas:_
 
 - Terraform commands: https://www.terraform.io/cli/commands
 - Terraform AWS Provider Registry: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+- Terraform S3 backend: https://www.terraform.io/language/settings/backends/s3
 - Terraform code structure: https://www.terraform-best-practices.com/code-structure
 - Terraform module structure: https://www.terraform.io/language/modules/develop/structure
 - Remote backend for AWS: https://www.terraform.io/language/settings/backends/s3
