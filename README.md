@@ -33,6 +33,14 @@ aws s3 cp ../utils/index.html s3://NOME_DO_SEU_BUCKET/index.html
   - Desafio
   - Estudos e próximos passos (flexibilidade, custos, testes, segurança, livros, etc.)
 
+_Ferramentas utilizadas:_
+
+- Yor: https://github.com/bridgecrewio/yor
+- Infracost: https://github.com/infracost/infracost
+- Terratest: https://github.com/gruntwork-io/terratest
+- Atlantis: https://github.com/runatlantis/atlantis
+- Terrascan: https://github.com/accurics/terrascan
+
 ## Referências
 
 - Terraform commands: https://www.terraform.io/cli/commands
@@ -40,3 +48,5 @@ aws s3 cp ../utils/index.html s3://NOME_DO_SEU_BUCKET/index.html
 - Terraform code structure: https://www.terraform-best-practices.com/code-structure
 - Terraform module structure: https://www.terraform.io/language/modules/develop/structure
 - Remote backend for AWS: https://www.terraform.io/language/settings/backends/s3
+- Terraform automation: https://learn.hashicorp.com/tutorials/terraform/automate-terraform?in=terraform/automation
+- Awesome Terraform: https://github.com/shuaibiyy/awesome-terraform
